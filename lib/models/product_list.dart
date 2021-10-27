@@ -6,6 +6,7 @@ class ProductList with ChangeNotifier {
   List<Product> _items = dummyProducts;
 
   List<Product> get items => [..._items];
+  List<Product> get favoriteItems => _items.where((product) => product.isFavorite).toList();
 
   void addProducy(Product product) {
     _items.add(product);
