@@ -26,7 +26,7 @@ class ProductItem extends StatelessWidget {
             IconButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(
-                  AppRoutes.produtc_form,
+                  AppRoutes.produtcForm,
                   arguments: product,
                 );
               },
@@ -38,16 +38,16 @@ class ProductItem extends StatelessWidget {
                 showDialog<bool>(
                   context: context,
                   builder: (ctx) => AlertDialog(
-                    title: Text('Ecluir produto'),
-                    content: Text('Tem certeza que deseja excluir este produto'),
+                    title: const Text('Ecluir produto'),
+                    content: const Text('Tem certeza que deseja excluir este produto'),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(false),
-                        child: Text('Não'),
+                        child: const Text('Não'),
                       ),
                       TextButton(
                         onPressed: () => Navigator.of(context).pop(true),
-                        child: Text('Sim'),
+                        child: const Text('Sim'),
                       ),
                     ],
                   ),

@@ -14,7 +14,7 @@ class CartPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carrinho'),
+        title: const Text('Carrinho'),
       ),
       body: Column(
         children: [
@@ -25,11 +25,11 @@ class CartPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Total',
                     style: TextStyle(fontSize: 20),
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Chip(
                     backgroundColor: Theme.of(context).colorScheme.primary,
                     label: Text(
@@ -40,14 +40,14 @@ class CartPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   TextButton(
                     onPressed: () {
                       Provider.of<OrderList>(context, listen: false).addOrder(cart);
 
                       cart.clear();
                     },
-                    child: Text('Comprar'),
+                    child: const Text('Comprar'),
                     style: TextButton.styleFrom(
                       textStyle: TextStyle(
                         color: Theme.of(context).colorScheme.primary,

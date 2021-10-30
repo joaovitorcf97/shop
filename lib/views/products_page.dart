@@ -14,13 +14,13 @@ class ProductsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gerenciar produtos'),
+        title: const Text('Gerenciar produtos'),
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushNamed(AppRoutes.produtc_form);
+              Navigator.of(context).pushNamed(AppRoutes.produtcForm);
             },
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           ),
         ],
       ),

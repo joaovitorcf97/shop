@@ -25,14 +25,14 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Minha loja'),
+        title: const Text('Minha loja'),
         actions: [
           Consumer<Cart>(
             child: IconButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(AppRoutes.cart);
               },
-              icon: Icon(Icons.shopping_cart),
+              icon: const Icon(Icons.shopping_cart),
             ),
             builder: (ctx, cart, child) => Badge(
               value: cart.itemsCount.toString(),
@@ -65,7 +65,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
       body: ProductGrid(
         showFavoriteOnly: _showFavoriteOnly,
       ),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
     );
   }
 }

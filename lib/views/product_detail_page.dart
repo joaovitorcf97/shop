@@ -25,15 +25,15 @@ class ProductDetailPage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               'R\$ ${product.price}',
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 20,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               width: double.infinity,
