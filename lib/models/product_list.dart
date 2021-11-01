@@ -38,6 +38,9 @@ class ProductList with ChangeNotifier {
       ));
 
       notifyListeners();
+    }).catchError((error) {
+      print(error.toString());
+      throw error;
     });
   }
 
